@@ -3,123 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autoserviss</title>
+    <title>Cactus</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
+
             margin: 0;
             padding: 0;
+            color: #f27f1b;
+            text-align: center;
         }
         header {
-            background-color: #0c943e;
-            color: rgba(24, 23, 23, 0.664);
+            background: linear-gradient(90deg, #0c943e, #f27f1b);
+            color: white;
             padding: 20px;
             font-size: 24px;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #888c88;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .block {
+            background: #ffffff;
+            border: 2px solid #0c943e;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(184, 24, 27, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
+            padding: 20px;
+            text-align: left;
+            font-weight: bold; /* Добавлено жирное начертание для всех заголовков h2 */
+        }
+        .block h2 {
+            color: #0c943e;
+            margin-top: 0;
+            font-weight: bold; /* Добавлено жирное начертание для всех заголовков h2 */
+        }
+        .block h3 {
+            color: #f27f1b;
+            margin-top: 5px;
+            
         }
         img {
-            max-width: 10%;
+            max-width: 60%;
             border-radius: 10px;
+            margin: 15px auto;
+            display: block;
+        }
+        a {
+            color: #0c943e;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f27f1b;
+            background: linear-gradient(135deg, #e4f5e4, #b6e2b6);
+            text-decoration: underline;
+            
         }
         .footer {
             margin-top: 40px;
-            padding: 10px;
-            background: #044a21;
-            color: rgba(32, 29, 29, 0.562);
-            font-weight: bold;
-        }
-        .contact {
-            margin-top: 20px;
-            padding: 20px;
-            background: #ede9e9;
-            border-radius: 10px;
-        }
-        .contact-form {
-            margin-top: 20px;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #db3232;
+            padding: 15px;
+            background: linear-gradient(90deg, #0c943e, #f27f1b);
             color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header>Diesel Systems.Viss dīzelu remontam.</header>
-    <header>Diesel Systems.Everything for diesel repair.</header>
+    <header>Latvijas Kaktusu un citu sukulentu biedrība</header>
+    <header>Latvian Society of Cacti and Other Succulents</header>
     <hr>
-    <div class="container">
-        <h2>Diagnostika. Ritošās daļas remonts.</h2>
-        <h3>Diagnostics. Chassis repair.</h3>
-        <h2>Sprauslu un sūkņu pārbaude un restaurācija.</h2>
-        <h3>Inspection and restoration of nozzles and pumps.</h3>
-        <h2>Turbīnu remonts.</h2>
-        <h3>Turbine repair.</h3>
-        <p></p>
-        <img src="images/kaktus5.jpg" alt="Logo">
-    </div>
 
-    <div class="contact">
-        <h2>Kontakti</h2>
-        <h2>Contact us</h2>
-        <p>Email: <a href="mailto:dieselsystemslv@gmail.com">dieselsystemslv@gmail.com</a></p>
-        <p>Email: <a href="mailto:tandemsv@inbox.lv">tandemsv@inbox.lv</a></p>
-        <p>Telefons: +371 26 777 307</p>
-        <p>Adrese: "Bruņinieku iela 139, Riga, Latvia"</p>
-
-    </div>
-
-    <div class="contact-form">
-        <h2>Sazinieties ar mums</h2>
-        <h2>Contact Us</h2>
-        
-        <form action="https://formspree.io/f/xblgrkge" method="POST">
-            <input type="text" name="name" placeholder="Jūsu vārds/Your name" required>
-            <input type="email" name="email" placeholder="Jūsu e-pasts/Your e-mail" required>
-            <textarea name="message" placeholder="Jūsu ziņojums/Your request" rows="5" required></textarea>
-            <button type="submit">Sūtīt, Send</button>
-        </form>
-    </div>
-
-    <div class="footer"><b>Vienmēr ir risinājums, There is always a solution</b></div>
-  
-</body>
-</html>
     <div class="grid">
         <!-- Блок 1 -->
         <div class="block">
-            <h3>Latvijas Kaktusu un citu sukulentu biedrība vieno Latvijas kaktusu un sukulentu entuziastus. 
+            <h2>Par mums / About us</h2>
+             <h3>Latvijas Kaktusu un citu sukulentu biedrība vieno Latvijas kaktusu un sukulentu entuziastus. 
               Biedrība organizē tikšanās, lekcijas un dārza izstādes, kurās dalībnieki var apmainīties ar pieredzi, 
               stādiem un padomiem par šo aizraujošo augu audzēšanu un kolekcionēšanu. 
               Pievienojies mums, lai kopīgi iepazītu un izjustu sukulentu daudzveidīgo un neparasto skaistumu!.</h3>
             <h3>The Latvian Cactus and Other Succulents Society brings together enthusiasts of cacti and succulents from across Latvia. 
               The society organizes meetings, lectures, and plant exhibitions where members can share their experience, plants, and advice on growing and collecting these fascinating plants. 
               Join us to explore and appreciate the diverse and unique beauty of succulents together!</h2>
-            
         </div>
+
+        <!-- Блок 2 -->
+        <div class="block">
+            <h2>Kontakti / Contacts</h2>
+            <p>Email: <a href="mailto:dieselsystemslv@gmail.com">oksanalv@gmail.com</a></p>
+            <p>Email: <a href="mailto:tandemsv@inbox.lv">cactus@inbox.lv</a></p>
+            <p>Telefons: +371 29489166</p>
+            <p>Botāniskais dārzs, Riga, Latvia</p>
+            <p>Kontaktinformācija:</p>
+
+        </div>
+
+        <!-- Блок 3 -->
+        <div class="block">
+            <h2>Rekvizīti apmaksai / Payment details</h2>
+            <p><b>Saņēmējs:</b> </p>
+            <p><b>Reģ. Nr.:</b> 4000xxxxxxx</p>
+            <p><b>Banka:</b> Swedbank AS</p>
+            <p><b>IBAN:</b> LVxxHABAxxxxxxxxxxxx</p>
+            <p><b>SWIFT:</b> HABALV22</p>
+            <img src="images/kaktus5.jpg" alt="Logo">
+        </div>
+
+        <!-- Блок 4 -->
+        <div class="block">
+            <h2>Nākamās tikšanās / Upcoming meetings</h2>
+            <p>No 25. līdz 28. septembrim Latvijas Universitātes Botāniskajā dārzā norisināsies aizraujoša kaktusu 
+                un citu sukulentu izstāde, kurā būs apskatāmi Latvijas Kaktusu un citu sukulentu biedrības kolekcionāru 
+                eksotiskie augi. Šī ir unikāla iespēja iepazīt augus, kas pārsteidz ar savu pielāgošanās spēju un neparasto izskatu.</p>
+            <p>From September 25 to 28, an exciting exhibition of cacti and other succulents will take place at the Botanical Garden 
+                of the University of Latvia, featuring exotic plants from the collections of the Latvian Society of Cacti and Other Succulents. 
+                This is a unique opportunity to discover plants that amaze with their adaptability and unusual appearance.</p>
+        </div>
+    </div>
+
+    <div class="footer"><b>Saglabāsim dabu! Let’s preserve nature!</b></div>
+</body>
+</html>
