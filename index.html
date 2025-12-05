@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cactus</title>
-
+    <!-- КРИТИЧЕСКИ ВАЖНЫЕ SEO-ТЕГИ -->
+    <title>Latvijas Kaktusu biedrība | Kaktusi un sukulenti Rīgā | Kaktuss.space</title>
+    <meta name="description" content="Latvijas Kaktusu un citu sukulentu biedrība - pulcējam entuziastus kopš 1965. gada. Tikšanās, lekcijas, konkursi. Pievienojies mums!">
+    <meta name="keywords" content="kaktusi Latvijā, sukulenti Rīgā, kaktusu biedrība, kaktusu audzēšana, retie kaktusi, augu kolekcionēšana, Latvian cactus society">
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Latvijas Kaktusu un citu sukulentu biedrība">
+    <meta property="og:description" content="Vienojam kaktusu un sukulentu entuziastus kopš 1965. gada. Pievienojies!">
+    <meta property="og:image" content="https://kaktuss.space/images/kol_1.jpg">
+    <meta property="og:url" content="https://kaktuss.space">
+    <meta property="og:type" content="website">
+    <!-- Каноническая ссылка и языки -->
+    <link rel="canonical" href="https://kaktuss.space">
+    <link rel="alternate" hreflang="lv" href="https://kaktuss.space">
+    <link rel="alternate" hreflang="en" href="https://kaktuss.space">
+    <!-- Favicon (добавьте свой) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Стили -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
@@ -76,15 +91,50 @@
             color: white;
             font-weight: bold;
         }
+        /* Микроразметка - скрыта от пользователя */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        /* Специальный класс для h1 в блоке About us */
+        .block h1 {
+            color: #e81515;
+            margin-top: 0;
+            font-weight: bold;
+            font-size: 1.8em; /* Делаем такой же размер как h2 */
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
+    <!-- Микроразметка Organization для Google -->
+    <div itemscope itemtype="https://schema.org/Organization" class="visually-hidden">
+        <span itemprop="name">Latvijas Kaktusu un citu sukulentu biedrība</span>
+        <span itemprop="alternateName">Latvian Society of Cacti and Other Succulents</span>
+        <span itemprop="description">Kaktusu un sukulentu entuziastu biedrība Latvijā kopš 1965. gada</span>
+        <span itemprop="email">kaktusudraugi@inbox.lv</span>
+        <span itemprop="telephone">+371 26322652</span>
+        <span itemprop="url">https://kaktuss.space</span>
+        <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Rīga</span>
+            <span itemprop="addressCountry">Latvia</span>
+        </span>
+    </div>
+
     <header>Latvijas Kaktusu un citu sukulentu biedrība</header>
     <header>Latvian Society of Cacti and Other Succulents</header>
     <hr>
 
     <div class="grid">
         <div class="block">
+            <!-- ВАЖНО: оставляем h1 для SEO, но стилизуем как h2 -->
+            <h1 style="display: none;">Latvijas Kaktusu un citu sukulentu biedrība - Par mums</h1>
             <h2>Par mums / About us</h2>
 
             <p>Latvijas Kaktusu un citu sukulentu biedrība vieno Latvijas kaktusu un sukulentu entuziastus. 
@@ -126,32 +176,31 @@
         <div class="block">
             <h2>Kontakti / Contacts</h2>
 
-            <p style="margin:0;">Email: <a href="kaktusudraugi@inbox.lv">kaktusudraugi@indox.lv</a></p>
+            <p style="margin:0;">Email: <a href="mailto:kaktusudraugi@inbox.lv">kaktusudraugi@inbox.lv</a></p>
             <p style="margin:0;">Telefons/Phone: +371 26322652</p>
 
             <p style="margin:0;">Email: <a href="mailto:olga.popova.oft@gmail.com">olga.popova.oft@gmail.com</a></p>
             <p style="margin:0;">Telefons/Phone: +371 29250486</p>
-            <p style="margin:0;">Website: <a href="https://kaktuss.space" target="_blank">https://kaktuss.space</a></p>
+            <p style="margin:0;">Website: <a href="https://kaktuss.space" target="_blank" rel="noopener">https://kaktuss.space</a></p>
 
-            <img src="images/kol_1.jpg" alt="Logo" style="margin-top: 10px; margin-bottom: 10px;">
+            <img src="images/kol_1.jpg" alt="Kaktusu biedrības dalībnieki" style="margin-top: 10px; margin-bottom: 10px;">
 
-        </details>
         <details class="history">
             <summary>📖 Mūsu logotips / Our logo</summary>
 
-            <img src="images/kaktus_brend.jpg" alt="Logo">
+            <img src="images/kaktus_brend.jpg" alt="Latvijas Kaktusu biedrības logotips">
         </details>
         </div>
 
 
         <div class="block">
             <h2>Rekvizīti apmaksai / Payment details</h2>
-            <p style="margin:0;"><b>Saņēmējs:</b>Latvijas Kaktusu un citu sukulentu biedrība</p>
+            <p style="margin:0;"><b>Saņēmējs:</b> Latvijas Kaktusu un citu sukulentu biedrība</p>
             <p style="margin:0;"><b>Reģ. Nr.:</b> 40008174954</p>
             <p style="margin:0;"><b>Banka:</b> Swedbank AS</p>
             <p style="margin:0;"><b>IBAN:</b> LV59HABA0551030467722</p>
             <p style="margin:0;"><b>SWIFT:</b> HABALV22XXX</p>
-            <img src="images/kaktus4.jpg" alt="Logo">
+            <img src="images/kaktus4.jpg" alt="Skaists kaktuss kolekcijā">
         </div>
 
         <div class="block">
@@ -167,16 +216,46 @@
             <p style="margin: 0;"> Lecturer: Mārīte Skulte. </p>
 
             <details class="content" style="margin-top: 50px;">
-
                 <summary>📖 Mūsu konkurss / Our contest</summary>
-                <p>Mēs ik gadu rīkojam foto konkursu un izvēlamies “Gada augu”.
+                <p>Mēs ik gadu rīkojam foto konkursu un izvēlamies "Gada augu".
                 Mēs būsim priecīgi, ja pievienosieties mūsu iniciatīvai un dalīsieties ar savu šo izcilo augu fotogrāfijām.</p>
-                <p>We hold a photography contest every year and select the “Plant of the Year.”
+                <p>We hold a photography contest every year and select the "Plant of the Year."
                 We would be delighted if you joined our initiative and shared your photos of these remarkable plants.</p>               
             </details>           
-
         </div>
     </div>
-    <div class="footer"><b>Saglabāsim dabu! Let’s preserve nature!</b></div>
+    <div class="footer"><b>Saglabāsim dabu! Let's preserve nature!</b></div>
+
+    <!-- Простая структурированная разметка для события -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Kaktusu biedrības tikšanās: Kaktusu sēšana",
+      "description": "Nākamā biedrības sēde un lekcija par kaktusu sēšanu",
+      "startDate": "2024-12-12T18:00",
+      "endDate": "2024-12-12T20:00",
+      "location": {
+        "@type": "Place",
+        "name": "Latvijas Nacionālais Dabas muzejs",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Krišjāņa Barona iela 4",
+          "addressLocality": "Rīga",
+          "postalCode": "LV-1050",
+          "addressCountry": "LV"
+        }
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Mārīte Skulte"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Latvijas Kaktusu un citu sukulentu biedrība",
+        "url": "https://kaktuss.space"
+      }
+    }
+    </script>
 </body>
 </html>
