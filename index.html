@@ -25,23 +25,77 @@
     <!-- Стили -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+        /* ── Цветовые темы / Color themes ─────────────────── */
+        :root {
+            --clr-primary:       #e81515;
+            --clr-primary-mid:   #ef2727;
+            --clr-primary-light: #f1f1f1;
+            --clr-primary-dark:  #b00010;
+            --clr-bg:            #e6e7eb;
+            --clr-block-bg:      #ffffff;
+            --clr-nav-bg:        #ffffff;
+            --clr-text:          #4c4d51;
+        }
+        .theme-green {
+            --clr-primary:       #2e7d32;
+            --clr-primary-mid:   #43a047;
+            --clr-primary-light: #f1f8e9;
+            --clr-primary-dark:  #1b5e20;
+            --clr-bg:            #e8f5e9;
+            --clr-block-bg:      #ffffff;
+            --clr-nav-bg:        #ffffff;
+            --clr-text:          #1b2e1c;
+        }
+        .theme-dark {
+            --clr-primary:       #e07090;
+            --clr-primary-mid:   #c85870;
+            --clr-primary-light: #2a2a2a;
+            --clr-primary-dark:  #a03050;
+            --clr-bg:            #181818;
+            --clr-block-bg:      #242424;
+            --clr-nav-bg:        #1e1e1e;
+            --clr-text:          #dde8dd;
+        }
+        .theme-desert {
+            --clr-primary:       #c0621a;
+            --clr-primary-mid:   #d47230;
+            --clr-primary-light: #fdf3e7;
+            --clr-primary-dark:  #9a4c0c;
+            --clr-bg:            #f5e6cc;
+            --clr-block-bg:      #fffaf4;
+            --clr-nav-bg:        #fffaf4;
+            --clr-text:          #4a3520;
+        }
+        .theme-blue {
+            --clr-primary:       #1565c0;
+            --clr-primary-mid:   #1976d2;
+            --clr-primary-light: #e3f2fd;
+            --clr-primary-dark:  #0d47a1;
+            --clr-bg:            #e8f0fe;
+            --clr-block-bg:      #ffffff;
+            --clr-nav-bg:        #ffffff;
+            --clr-text:          #0d1b3e;
+        }
+
+        /* ── Базовые стили / Base styles ───────────────────── */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #4c4d51;
+            color: var(--clr-text);
             text-align: center;
-            background: #e6e7eb;
+            background: var(--clr-bg);
+            transition: background 0.3s, color 0.3s;
         }
 
         summary {
-            color: #e81515;
+            color: var(--clr-primary);
             font-weight: bold;
             cursor: pointer;
         }
 
         header {
-            background: linear-gradient(90deg, #e81515, #ef2727, #f1f1f1);
+            background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-mid), var(--clr-primary-light));
             color: white;
             padding: 5px;
             font-size: 24px;
@@ -57,23 +111,24 @@
         }
 
         .block {
-            background: #ffffff;
-            border: 2px solid #e81515;
+            background: var(--clr-block-bg);
+            border: 2px solid var(--clr-primary);
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(158, 136, 136, 0.08);
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
             padding: 20px;
             text-align: left;
             font-weight: bold;
+            transition: background 0.3s, border-color 0.3s;
         }
 
         .block h2 {
-            color: #e81515;
+            color: var(--clr-primary);
             margin-top: 0;
             font-weight: bold;
         }
 
         .block h3 {
-            color: #4c4d51;
+            color: var(--clr-text);
             margin-top: 5px;
         }
 
@@ -82,15 +137,16 @@
             border-radius: 10px;
             margin: 15px auto;
             display: block;
+            cursor: zoom-in;
         }
 
         a {
-            color: #e81515;
+            color: var(--clr-primary);
             text-decoration: none;
         }
 
         a:hover {
-            color: #6b6c6e;
+            color: var(--clr-text);
             background: linear-gradient(135deg, #e4f5e4, #b6e2b6);
             text-decoration: underline;
         }
@@ -98,7 +154,7 @@
         .footer {
             margin-top: 40px;
             padding: 15px;
-            background: linear-gradient(90deg, #e81515, #ef2727, #f1f1f1);
+            background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-mid), var(--clr-primary-light));
             color: white;
             font-weight: bold;
         }
@@ -115,14 +171,194 @@
             border: 0;
         }
 
-        /* Специальный класс для h1 в блоке About us */
-        .block h1 {
-            color: #e81515;
-            margin-top: 0;
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gallery img {
+            max-width: 45%;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--clr-nav-bg);
+            border-bottom: 2px solid var(--clr-primary);
+            padding: 8px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 16px;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s, border-color 0.3s;
+        }
+        nav a {
+            color: var(--clr-primary);
             font-weight: bold;
-            font-size: 1.8em;
-            /* Делаем такой же размер как h2 */
-            margin-bottom: 15px;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background: none;
+            text-decoration: underline;
+            color: var(--clr-text);
+        }
+
+        /* Theme switcher */
+        .theme-switcher {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: 8px;
+        }
+        .theme-dot {
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            border: 2px solid rgba(0,0,0,0.18);
+            cursor: pointer;
+            padding: 0;
+            transition: transform 0.15s, border-color 0.15s;
+            flex-shrink: 0;
+        }
+        .theme-dot:hover { transform: scale(1.25); }
+        .theme-dot.active { border-color: rgba(0,0,0,0.55); transform: scale(1.2); }
+
+        /* Slideshow */
+        .block-full {
+            grid-column: 1 / -1;
+        }
+        .slideshow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 12px 0;
+        }
+        .ss-stage {
+            flex: 1;
+            position: relative;
+        }
+        .ss-stage img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: zoom-in;
+            display: block;
+        }
+        .ss-counter {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            pointer-events: none;
+        }
+        .ss-btn {
+            background: var(--clr-primary);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            font-size: 20px;
+            cursor: pointer;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .ss-btn:hover { background: var(--clr-primary-dark); }
+        .ss-controls {
+            text-align: center;
+            margin: 8px 0;
+        }
+        #ss-play {
+            background: var(--clr-block-bg);
+            border: 2px solid var(--clr-primary);
+            color: var(--clr-primary);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        #ss-play:hover { background: var(--clr-primary); color: #fff; }
+        .ss-thumbs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+            justify-content: center;
+        }
+        .ss-thumbs img {
+            width: 58px;
+            height: 44px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            opacity: 0.55;
+            border: 2px solid transparent;
+            transition: opacity 0.2s, border-color 0.2s;
+        }
+        .ss-thumbs img:hover { opacity: 0.85; }
+        .ss-thumbs img.ss-active {
+            opacity: 1;
+            border-color: var(--clr-primary);
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+        #lightbox.open {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+            cursor: default;
+            object-fit: contain;
+        }
+        #lightbox-close {
+            position: fixed;
+            top: 16px;
+            right: 24px;
+            color: #fff;
+            font-size: 36px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+            user-select: none;
+        }
+
+        @media (max-width: 500px) {
+            .grid {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+                padding: 0 12px;
+            }
+            header { font-size: 17px; padding: 8px; }
+            img { max-width: 90%; }
+            .gallery img { max-width: 90%; }
+            .ss-stage img { height: 200px; }
+            .ss-thumbs img { width: 44px; height: 34px; }
         }
     </style>
 </head>
@@ -142,14 +378,30 @@
         </span>
     </div>
 
-    <header>Latvijas Kaktusu un citu sukulentu biedrība</header>
-    <header>Latvian Society of Cacti and Other Succulents</header>
+    <header>
+        <div>Latvijas Kaktusu un citu sukulentu biedrība</div>
+        <div style="font-size: 0.75em; opacity: 0.85;">Latvian Society of Cacti and Other Succulents</div>
+    </header>
+    <nav>
+        <a href="#par-mums">Par mums</a>
+        <a href="#kontakti">Kontakti</a>
+        <a href="#rekviziti">Rekvizīti</a>
+        <a href="#tikshanas">Tikšanās</a>
+        <a href="#dzive">Dzīve</a>
+        <a href="#notikumi">Notikumi</a>
+        <a href="#galerija">Galerija</a>
+        <div class="theme-switcher" title="Krāsu tēma / Color theme">
+            <button class="theme-dot active" data-theme=""       style="background:#e81515" title="Sarkans / Red"></button>
+            <button class="theme-dot"        data-theme="green"  style="background:#2e7d32" title="Zaļš / Green"></button>
+            <button class="theme-dot"        data-theme="dark"   style="background:#242424" title="Tumšs / Dark"></button>
+            <button class="theme-dot"        data-theme="desert" style="background:#c0621a" title="Tuksnesnis / Desert"></button>
+            <button class="theme-dot"        data-theme="blue"   style="background:#1565c0" title="Zils / Blue"></button>
+        </div>
+    </nav>
     <hr>
 
     <div class="grid">
-        <div class="block">
-            <!-- ВАЖНО: оставляем h1 для SEO, но стилизуем как h2 -->
-            <h1 style="display: none;">Latvijas Kaktusu un citu sukulentu biedrība - Par mums</h1>
+        <div class="block" id="par-mums">
             <h2>Par mums / About us</h2>
 
             <p>Latvijas Kaktusu un citu sukulentu biedrība vieno Latvijas kaktusu un sukulentu entuziastus.
@@ -206,7 +458,7 @@
             </details>
         </div>
 
-        <div class="block">
+        <div class="block" id="kontakti">
             <h2>Kontakti / Contacts</h2>
 
             <p style="margin:0;">Email: <a href="mailto:kaktusudraugi@inbox.lv">kaktusudraugi@inbox.lv</a></p>
@@ -228,7 +480,7 @@
         </div>
 
 
-        <div class="block">
+        <div class="block" id="rekviziti">
             <h2>Rekvizīti apmaksai / Payment details</h2>
             <p style="margin:0;"><b>Saņēmējs:</b> Latvijas Kaktusu un citu sukulentu biedrība</p>
             <p style="margin:0;"><b>Reģ. Nr.:</b> 40008174954</p>
@@ -238,15 +490,13 @@
             <img src="images/kaktus4.jpg" alt="Skaists kaktuss kolekcijā">
         </div>
 
-        <div class="block">
+        <div class="block" id="tikshanas">
             <h2>Nākamās tikšanās / Upcoming meetings</h2>
             <p>Nākamā biedrības sēde notiks 13. martā plkst.18.00 Latvijas Nacionālajā Dabas muzejā.
                 Adr.:Krišjāņa Barona iela 4, Centra rajons, Rīga, LV-1050, 6. stāvā.</p>
             <p style="margin: 0;">Lekcijas tēma 1.: Ziemcietīgi kaktusi atklātā gruntī Latvijā.</p>
             <p style="margin: 0;">Lekcijas tēma 2.: Stādu potēšana.</p>
             <p style="margin: 0;">Lektors: Lija Ivaska.</p>
-            
-            </details>
 
             <p>The next association meeting will take place on March 13 at 18:00 at the Latvian National Museum of
                 Natural History.
@@ -254,14 +504,10 @@
             <p style="margin: 0;">Lecture topic 1.: Winter-hardy cacti in open ground in Latvia. </p>
             <p style="margin: 0;">Lecture topic 2.: Seedling grafting. </p>
             <p style="margin: 0;"> Lecture: Lija Ivaska. </p>
-        
-
-            </details>
-
 
         </div>
 
-        <div class="block">
+        <div class="block" id="dzive">
             <h2>Mūsu dzīve / Our Life</h2>
             <p>👉 Neskatoties uz puteni un stipro salu, februāra tikšanās tomēr notika un norisinājās patiesi draudzīgā atmosfērā.
                 Sirsnīgi pateicamies Kārlim par izcilo lekciju par opuncijām. Materiāls bija rūpīgi sagatavots, strukturēts un pasniegts aizraujoši un saprotami.
@@ -278,7 +524,7 @@
 
 </div>
 
-<div class="block">
+<div class="block" id="notikumi">
             <h2>Notikumi / Events</h2>
 
 
@@ -317,22 +563,30 @@
 
 <details class="content">
     <summary>🖼️ Foto no privātajām kolekcijām (Lija Ivaska) / Photos from private collections (Lija Ivaska)</summary>
-        </p>
-
     <div class="gallery">
         <img src="images/colection/kaktus_3.jpg" alt="collection 1">
         <img src="images/colection/kaktus_4.jpg" alt="collection 2">
         <img src="images/colection/kaktus_5.jpg" alt="collection 3">
-
-    </p>
+    </div>
 </details>
 </div>
 
-</details>
 
-</div>
-
-
+        <div class="block block-full" id="galerija">
+            <h2>Galerija / Gallery</h2>
+            <div class="slideshow">
+                <button class="ss-btn" id="ss-prev" title="Iepriekšējā / Previous">&#10094;</button>
+                <div class="ss-stage">
+                    <img id="ss-img" src="images/colection_internet/wiki_1.jpg" alt="Kaktuss 1">
+                    <div class="ss-counter"><span id="ss-cur">1</span> / <span id="ss-total">25</span></div>
+                </div>
+                <button class="ss-btn" id="ss-next" title="Nākamā / Next">&#10095;</button>
+            </div>
+            <div class="ss-controls">
+                <button id="ss-play">&#9654; Atskaņot / Play</button>
+            </div>
+            <div class="ss-thumbs" id="ss-thumbs"></div>
+        </div>
     </div>
     <div class="footer"><b>Saglabāsim dabu! Let's preserve nature!</b></div>
 
@@ -366,6 +620,139 @@
         "url": "https://kaktuss.space"
       }
     }
+    </script>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <span id="lightbox-close" title="Aizvērt / Close">&#x2715;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        /* ── Themes ─────────────────────────────────────── */
+        (function () {
+            const saved = localStorage.getItem('kaktuss-theme') || '';
+            applyTheme(saved);
+
+            document.querySelectorAll('.theme-dot').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    applyTheme(btn.dataset.theme);
+                    localStorage.setItem('kaktuss-theme', btn.dataset.theme);
+                });
+            });
+
+            function applyTheme(theme) {
+                document.documentElement.className = theme ? 'theme-' + theme : '';
+                document.querySelectorAll('.theme-dot').forEach(b => {
+                    b.classList.toggle('active', b.dataset.theme === theme);
+                });
+            }
+        })();
+
+        /* ── Slideshow ─────────────────────────────────── */
+        const ssImages = [
+            {src: 'images/colection_internet/wiki_1.jpg',  alt: 'Echinopsis oxygona'},
+            {src: 'images/colection_internet/wiki_2.jpg',  alt: 'Euphorbia caput-medusae'},
+            {src: 'images/colection_internet/wiki_3.jpg',  alt: 'Mammillaria longimamma'},
+            {src: 'images/colection_internet/wiki_4.jpg',  alt: 'Kaktusi muzejā'},
+            {src: 'images/colection_internet/wiki_5.jpg',  alt: 'Kaktuss dārzā'},
+            {src: 'images/colection_internet/wiki_6.jpg',  alt: 'Kaktuss'},
+            {src: 'images/colection_internet/wiki_7.jpg',  alt: 'Kaktuss'},
+            {src: 'images/colection_internet/wiki_8.jpg',  alt: 'Opuntia phaeacantha zieds'},
+            {src: 'images/colection_internet/wiki_11.jpg', alt: 'Aloinopsis malherbei'},
+            {src: 'images/colection_internet/wiki_12.jpg', alt: 'Sukulents'},
+            {src: 'images/colection_internet/wiki_13.jpg', alt: 'Sukulents'},
+            {src: 'images/colection_internet/wiki_14.jpg', alt: 'Sukulents makro'},
+            {src: 'images/colection_internet/wiki_15.jpg', alt: 'Sukulents'},
+            {src: 'images/colection_internet/wiki_16.jpg', alt: 'Sukulents terārijs'},
+            {src: 'images/colection_internet/wiki_17.jpg', alt: 'Sukulents dārzā'},
+            {src: 'images/colection_internet/wiki_18.jpg', alt: 'Sukulenti'},
+            {src: 'images/colection_internet/wiki_19.jpg', alt: 'Sukulenti'},
+            {src: 'images/colection_internet/wiki_20.jpg', alt: 'Sukulents makro'},
+        ];
+
+        let ssCurrent = 0;
+        let ssPlaying = false;
+        let ssTimer = null;
+        const ssImg = document.getElementById('ss-img');
+        const ssCur = document.getElementById('ss-cur');
+        const ssTotal = document.getElementById('ss-total');
+        const ssThumbsEl = document.getElementById('ss-thumbs');
+        const ssPlayBtn = document.getElementById('ss-play');
+
+        ssTotal.textContent = ssImages.length;
+
+        // Build thumbnails
+        ssImages.forEach((item, i) => {
+            const t = document.createElement('img');
+            t.src = item.src;
+            t.alt = item.alt;
+            t.className = i === 0 ? 'ss-active' : '';
+            t.addEventListener('click', () => ssGo(i));
+            ssThumbsEl.appendChild(t);
+        });
+
+        function ssGo(n) {
+            ssCurrent = (n + ssImages.length) % ssImages.length;
+            ssImg.src = ssImages[ssCurrent].src;
+            ssImg.alt = ssImages[ssCurrent].alt;
+            ssCur.textContent = ssCurrent + 1;
+            ssThumbsEl.querySelectorAll('img').forEach((t, i) => {
+                t.classList.toggle('ss-active', i === ssCurrent);
+            });
+            // Scroll active thumb into view
+            const activeThumb = ssThumbsEl.querySelectorAll('img')[ssCurrent];
+            if (activeThumb) activeThumb.scrollIntoView({block: 'nearest', inline: 'nearest'});
+        }
+
+        document.getElementById('ss-prev').addEventListener('click', () => ssGo(ssCurrent - 1));
+        document.getElementById('ss-next').addEventListener('click', () => ssGo(ssCurrent + 1));
+
+        ssPlayBtn.addEventListener('click', () => {
+            ssPlaying = !ssPlaying;
+            ssPlayBtn.innerHTML = ssPlaying
+                ? '&#9646;&#9646; Apturēt / Pause'
+                : '&#9654; Atskaņot / Play';
+            if (ssPlaying) {
+                ssTimer = setInterval(() => ssGo(ssCurrent + 1), 3500);
+            } else {
+                clearInterval(ssTimer);
+            }
+        });
+
+        // Keyboard navigation for slideshow
+        document.addEventListener('keydown', e => {
+            if (document.getElementById('lightbox').classList.contains('open')) return;
+            if (e.key === 'ArrowLeft')  ssGo(ssCurrent - 1);
+            if (e.key === 'ArrowRight') ssGo(ssCurrent + 1);
+        });
+
+        /* ── Lightbox ───────────────────────────────────── */
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const lbClose = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('img').forEach(img => {
+            if (img.closest('.ss-thumbs') || img.id === 'lightbox-img') return;
+            img.addEventListener('click', () => {
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lightbox.classList.add('open');
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            lbImg.src = '';
+        }
+
+        lightbox.addEventListener('click', e => {
+            if (e.target !== lbImg) closeLightbox();
+        });
+        lbClose.addEventListener('click', closeLightbox);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
     </script>
 </body>
 
