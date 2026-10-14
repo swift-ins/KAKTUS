@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- КРИТИЧЕСКИ ВАЖНЫЕ SEO-ТЕГИ -->
+    <title>Latvijas Kaktusu biedrība | Kaktusi un sukulenti Rīgā | Kaktuss.space</title>
+    <meta name="description"
+        content="Latvijas Kaktusu un citu sukulentu biedrība - pulcējam entuziastus kopš 1965. gada. Tikšanās, lekcijas, konkursi. Pievienojies mums!">
+    <meta name="keywords"
+        content="kaktusi Latvijā, sukulenti Rīgā, kaktusu biedrība, kaktusu audzēšana, retie kaktusi, augu kolekcionēšana, Latvian cactus society">
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Latvijas Kaktusu un citu sukulentu biedrība">
+    <meta property="og:description" content="Vienojam kaktusu un sukulentu entuziastus kopš 1965. gada. Pievienojies!">
+    <meta property="og:image" content="https://kaktuss.space/images/kol_1.jpg">
+    <meta property="og:url" content="https://kaktuss.space">
+    <meta property="og:type" content="website">
+    <!-- Каноническая ссылка и языки -->
+    <link rel="canonical" href="https://kaktuss.space">
+    <link rel="alternate" hreflang="lv" href="https://kaktuss.space">
+    <link rel="alternate" hreflang="en" href="https://kaktuss.space">
+    <!-- Favicon (добавьте свой) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Стили -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ── Цветовые темы / Color themes ─────────────────── */
+        :root {
+            --clr-primary:       #e81515;
+            --clr-primary-mid:   #ef2727;
+            --clr-primary-light: #f1f1f1;
+            --clr-primary-dark:  #b00010;
+            --clr-bg:            #e6e7eb;
+            --clr-block-bg:      #ffffff;
+            --clr-nav-bg:        #ffffff;
+            --clr-text:          #4c4d51;
+        }
+        .theme-green {
+            --clr-primary:       #2e7d32;
+            --clr-primary-mid:   #43a047;
+            --clr-primary-light: #f1f8e9;
+            --clr-primary-dark:  #1b5e20;
+            --clr-bg:            #e8f5e9;
+            --clr-block-bg:      #ffffff;
+            --clr-nav-bg:        #ffffff;
+            --clr-text:          #1b2e1c;
+        }
+        .theme-dark {
+            --clr-primary:       #e07090;
+            --clr-primary-mid:   #c85870;
+            --clr-primary-light: #2a2a2a;
+            --clr-primary-dark:  #a03050;
+            --clr-bg:            #181818;
+            --clr-block-bg:      #242424;
+            --clr-nav-bg:        #1e1e1e;
+            --clr-text:          #dde8dd;
+        }
+        .theme-desert {
+            --clr-primary:       #c0621a;
+            --clr-primary-mid:   #d47230;
+            --clr-primary-light: #fdf3e7;
+            --clr-primary-dark:  #9a4c0c;
+            --clr-bg:            #f5e6cc;
+            --clr-block-bg:      #fffaf4;
+            --clr-nav-bg:        #fffaf4;
+            --clr-text:          #4a3520;
+        }
+        .theme-blue {
+            --clr-primary:       #1565c0;
+            --clr-primary-mid:   #1976d2;
+            --clr-primary-light: #e3f2fd;
+            --clr-primary-dark:  #0d47a1;
+            --clr-bg:            #e8f0fe;
+            --clr-block-bg:      #ffffff;
+            --clr-nav-bg:        #ffffff;
+            --clr-text:          #0d1b3e;
+        }
+
+        /* ── Базовые стили / Base styles ───────────────────── */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--clr-text);
+            text-align: center;
+            background: var(--clr-bg);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        summary {
+            color: var(--clr-primary);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-mid), var(--clr-primary-light));
+            color: white;
+            padding: 5px;
+            font-size: 24px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .block {
+            background: var(--clr-block-bg);
+            border: 2px solid var(--clr-primary);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
+            padding: 20px;
+            text-align: left;
+            font-weight: bold;
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        .block h2 {
+            color: var(--clr-primary);
+            margin-top: 0;
+            font-weight: bold;
+        }
+
+        .block h3 {
+            color: var(--clr-text);
+            margin-top: 5px;
+        }
+
+        img {
+            max-width: 60%;
+            border-radius: 10px;
+            margin: 15px auto;
+            display: block;
+            cursor: zoom-in;
+        }
+
+        a {
+            color: var(--clr-primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--clr-text);
+            background: linear-gradient(135deg, #e4f5e4, #b6e2b6);
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 15px;
+            background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-mid), var(--clr-primary-light));
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Микроразметка - скрыта от пользователя */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gallery img {
+            max-width: 45%;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--clr-nav-bg);
+            border-bottom: 2px solid var(--clr-primary);
+            padding: 8px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 16px;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s, border-color 0.3s;
+        }
+        nav a {
+            color: var(--clr-primary);
+            font-weight: bold;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background: none;
+            text-decoration: underline;
+            color: var(--clr-text);
+        }
+
+        /* Theme switcher */
+        .theme-switcher {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: 8px;
+        }
+        .theme-dot {
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            border: 2px solid rgba(0,0,0,0.18);
+            cursor: pointer;
+            padding: 0;
+            transition: transform 0.15s, border-color 0.15s;
+            flex-shrink: 0;
+        }
+        .theme-dot:hover { transform: scale(1.25); }
+        .theme-dot.active { border-color: rgba(0,0,0,0.55); transform: scale(1.2); }
+
+        /* Slideshow */
+        .block-full {
+            grid-column: 1 / -1;
+        }
+        .slideshow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 12px 0;
+        }
+        .ss-stage {
+            flex: 1;
+            position: relative;
+        }
+        .ss-stage img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: zoom-in;
+            display: block;
+        }
+        .ss-counter {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            pointer-events: none;
+        }
+        .ss-btn {
+            background: var(--clr-primary);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            font-size: 20px;
+            cursor: pointer;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .ss-btn:hover { background: var(--clr-primary-dark); }
+        .ss-controls {
+            text-align: center;
+            margin: 8px 0;
+        }
+        #ss-play {
+            background: var(--clr-block-bg);
+            border: 2px solid var(--clr-primary);
+            color: var(--clr-primary);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        #ss-play:hover { background: var(--clr-primary); color: #fff; }
+        .ss-thumbs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+            justify-content: center;
+        }
+        .ss-thumbs img {
+            width: 58px;
+            height: 44px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            opacity: 0.55;
+            border: 2px solid transparent;
+            transition: opacity 0.2s, border-color 0.2s;
+        }
+        .ss-thumbs img:hover { opacity: 0.85; }
+        .ss-thumbs img.ss-active {
+            opacity: 1;
+            border-color: var(--clr-primary);
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+        #lightbox.open {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+            cursor: default;
+            object-fit: contain;
+        }
+        #lightbox-close {
+            position: fixed;
+            top: 16px;
+            right: 24px;
+            color: #fff;
+            font-size: 36px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+            user-select: none;
+        }
+
+        @media (max-width: 500px) {
+            .grid {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+                padding: 0 12px;
+            }
+            header { font-size: 17px; padding: 8px; }
+            img { max-width: 90%; }
+            .gallery img { max-width: 90%; }
+            .ss-stage img { height: 200px; }
+            .ss-thumbs img { width: 44px; height: 34px; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Микроразметка Organization для Google -->
+    <div itemscope itemtype="https://schema.org/Organization" class="visually-hidden">
+        <span itemprop="name">Latvijas Kaktusu un citu sukulentu biedrība</span>
+        <span itemprop="alternateName">Latvian Society of Cacti and Other Succulents</span>
+        <span itemprop="description">Kaktusu un sukulentu entuziastu biedrība Latvijā kopš 1965. gada</span>
+        <span itemprop="email">kaktusudraugi@inbox.lv</span>
+        <span itemprop="telephone">+371 26322652</span>
+        <span itemprop="url">https://kaktuss.space</span>
+        <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Rīga</span>
+            <span itemprop="addressCountry">Latvia</span>
+        </span>
+    </div>
+
+    <header>
+        <div>Latvijas Kaktusu un citu sukulentu biedrība</div>
+        <div style="font-size: 0.75em; opacity: 0.85;">Latvian Society of Cacti and Other Succulents</div>
+    </header>
+    <nav>
+        <a href="#par-mums">Par mums</a>
+        <a href="#kontakti">Kontakti</a>
+        <a href="#rekviziti">Rekvizīti</a>
+        <a href="#tikshanas">Tikšanās</a>
+        <a href="#dzive">Dzīve</a>  
+        <a href="#interesanti">Interesanti</a>
+        <a href="#notikumi">Notikumi</a>
+
+        
+        <div class="theme-switcher" title="Krāsu tēma / Color theme">
+            <button class="theme-dot active" data-theme=""       style="background:#e81515" title="Sarkans / Red"></button>
+            <button class="theme-dot"        data-theme="green"  style="background:#2e7d32" title="Zaļš / Green"></button>
+            <button class="theme-dot"        data-theme="dark"   style="background:#242424" title="Tumšs / Dark"></button>
+            <button class="theme-dot"        data-theme="desert" style="background:#c0621a" title="Tuksnesnis / Desert"></button>
+            <button class="theme-dot"        data-theme="blue"   style="background:#1565c0" title="Zils / Blue"></button>
+        </div>
+    </nav>
+    <hr>
+
+    <div class="grid">
+        <div class="block" id="par-mums">
+            <h2>Par mums / About us</h2>
+
+            <p>Latvijas Kaktusu un citu sukulentu biedrība vieno Latvijas kaktusu un sukulentu entuziastus.
+                Biedrība organizē tikšanās, lekcijas un dārza izstādes, kurās dalībnieki var apmainīties ar pieredzi,
+                stādiem un padomiem par šo aizraujošo augu audzēšanu un kolekcionēšanu.
+                Pievienojies mums, lai kopīgi iepazītu un izjustu sukulentu daudzveidīgo un neparasto skaistumu!</p>
+
+
+            <p>The Latvian Cactus and Other Succulents Society brings together enthusiasts of cacti and succulents from
+                across Latvia.
+                The society organizes meetings, lectures, and plant exhibitions where members can share their
+                experience, plants, and advice
+                on growing and collecting these fascinating plants. Join us to explore and appreciate the diverse and
+                unique beauty of succulents together!</p>
+
+            <details class="history" style="margin-top: 40px;">
+                <summary>📖 Kluba vēsture / Club history</summary>
+                <p>1965. gada martā nelielā Zinātņu akadēmijas ziedu veikaliņā pirmo reizi pulcējās eksotisko augu
+                    cienītāji.
+                    Drīz vien grupu vadīja Z. Gaile, bet lekcijas interesentiem lasīja Gaisma Krastiņa un Jānis Šķipsna.
+                </p>
+                <p>Toreiz literatūras par sukulentu audzēšanu bija ļoti maz, tāpēc entuziasti paši tulkoja rakstus un
+                    grāmatas no vācu,
+                    čehu un citām valodām. Pateicoties viņu darbam un aizrautībai, visā Latvijā tika izveidotas daudzas
+                    privātkolekcijas.
+                    Notika izstādes muzejos, skolās, teātros un kolhozos, tika izveidotas ekspozīcijas botāniskajos
+                    dārzos.
+                    Arī dārzkopības saimniecībās sāka audzēt sukulentus un ražot to sēklas pārdošanai.
+                    Šodien šo pirmo entuziastu tradīcijas turpina dzīvot tālāk.</p>
+                <p>Mūsdienu kolekcionāri, pētnieki un vienkārši augu mīļotāji ar tādu pašu sirsnību un rūpību turpina
+                    kopt retus augus,
+                    dalīties pieredzē, paplašināt kolekcijas un atbalstīt šīs kustības attīstību Latvijā.
+                    Pateicoties šiem cilvēkiem, kaktusu un citu sukulentu audzēšanas kultūra mūsu valstī ne tikai
+                    saglabājas, bet arī turpina uzplaukt.</p>
+                <br><br>
+                <p>The widespread interest in cacti in Latvia began in the 1960s.
+                    In March 1965, a small flower shop at the Academy of Sciences hosted the first gathering of
+                    enthusiasts of these exotic plants.
+                    The group was later led by Z. Gaile, while the first lectures for members were delivered by Gaisma
+                    Krastiņa and Jānis Šķipsna.</p>
+                <p>At that time, literature on succulent cultivation was scarce, so enthusiasts translated articles and
+                    books
+                    themselves from German, Czech, and other languages. Thanks to their dedication and passion, numerous
+                    private collections were created throughout Latvia. Exhibitions were held in museums, schools,
+                    theatres, and collective farms, and special displays were established in botanical gardens.
+                    Horticultural farms also began growing succulents and producing seeds for sale.</p>
+                <p>Today, the traditions of those early enthusiasts continue to thrive.
+                    Modern collectors, researchers, and plant lovers carry on this work with the same devotion and care
+                    —
+                    cultivating rare species, sharing knowledge, expanding collections, and supporting the growth of
+                    this movement across Latvia.
+                    It is thanks to these people that the culture of growing cacti and succulents in Latvia not only
+                    endures but continues to flourish.</p>
+            </details>
+        </div>
+
+        <div class="block" id="kontakti">
+            <h2>Kontakti / Contacts</h2>
+
+            <p style="margin:0;">Email: <a href="mailto:kaktusudraugi@inbox.lv">kaktusudraugi@inbox.lv</a></p>
+            <p style="margin:0;">Telefons/Phone: +371 26322652</p>
+
+            <p style="margin:0;">Email: <a href="mailto:olga.popova.oft@gmail.com">olga.popova.oft@gmail.com</a></p>
+            <p style="margin:0;">Telefons/Phone: +371 29250486</p>
+            <p style="margin:0;">Website: <a href="https://kaktuss.space" target="_blank"
+                    rel="noopener">https://kaktuss.space</a></p>
+
+            <img src="images/kol_1.jpg" alt="Kaktusu biedrības dalībnieki"
+                style="margin-top: 10px; margin-bottom: 10px;">
+
+            <details class="history">
+                <summary>📖 Mūsu logotips / Our logo</summary>
+
+                <img src="images/kaktus_brend.jpg" alt="Latvijas Kaktusu biedrības logotips">
+            </details>
+        </div>
+
+
+        <div class="block" id="rekviziti">
+            <h2>Rekvizīti apmaksai / Payment details</h2>
+            <p style="margin:0;"><b>Saņēmējs:</b> Latvijas Kaktusu un citu sukulentu biedrība</p>
+            <p style="margin:0;"><b>Reģ. Nr.:</b> 40008174954</p>
+            <p style="margin:0;"><b>Banka:</b> Swedbank AS</p>
+            <p style="margin:0;"><b>IBAN:</b> LV59HABA0551030467722</p>
+            <p style="margin:0;"><b>SWIFT:</b> HABALV22XXX</p>
+            <img src="images/kaktus4.jpg" alt="Skaists kaktuss kolekcijā">
+        </div>
+
+        <div class="block" id="tikshanas">
+            <h2>Nākamās tikšanās / Upcoming meetings</h2>
+            <p>Jauno sezonu sākam jaunā vietā! ✨<br>
+            Turpmāk mūsu biedrības sapulces notiks adresē:  Rīga, Ieriķu ielā 43A, kab.218.<br>
+            Mūsu pirmā tikšanās notiks 12. Oktobrī plkst. 18.00. 
+            Ar nepacietību gaidīsim gan mūsu pastāvīgos biedrus, gan jaunus kaktusu un sukulentu draugus! 
+            Šo sezonu sāksim Mārtiņa Mūsiņa vadībā.<br>
+            Lekcijas tēma: Trichocerei</p>       
+            <a href="https://apkaimes.lv/integracija/par-nvo-namu/"target="_blank" 
+            style="display: block; margin-top: 20px; color: red;">
+            https://apkaimes.lv/integracija/par-nvo-namu
+            </a>
+            <p>We’re starting the new season in a new place! ✨<br> 
+            From now on, our association’s meetings will take place at: Riga, Ieriķu str 43A- 218. <br>
+            Our first meeting of the new academic year will take place on October 12 at 6:00 PM.
+            We are looking forward to welcoming both our regular members and new friends who share a passion for cacti and succulents! 
+            We’ll kick off the new season in the company of Mārtiņš Mūsiņš.<br>
+            Lecture topic: Trichocerei</p>
+            
+        </div>
+
+        <div class="block" id="dzive">
+            <h2>Septembris, 2026 / September, 2026</h2>
+            <p>👉 Sukulentu izstāde Botāniskajā dārzā</p>
+            <p>👉👉Neraugoties uz apmākušos laiku, apmeklētāji cits pēc cita ieradās Botāniskajā dārzā, lai apskatītu mūsu sukulentu izstādi. Tajā bija apskatāmi unikāli augi no desmit mūsu kolekcionāru kolekcijām.
+                    Kā vienmēr, izstāde bija lieliska iespēja apmainīties ar augiem un dalīties ar interesantiem eksemplāriem. Izstādes dežuranti labprāt stāstīja apmeklētājiem par šo brīnišķīgo augu dzīvesveidu un īpatnībām, kā arī dalījās padomos par sukulentu kopšanu mājas apstākļos.
+                    Apmeklētājiem bija iespēja piedalīties augu pārstādīšanas meistarklasē. Tika sniegti noderīgi ieteikumi par piemērota augsnes maisījuma sagatavošanu, pareizu laistīšanu un skaistu sukulentu kompozīciju veidošanu.
+                    Īpašs prieks, ka jau pašas izstādes laikā vairāki cilvēki izteica vēlmi pievienoties mūsu biedrībai! Ar nepacietību gaidīsim jaunos biedrus 12. oktobra sapulcē.</p>                                   
+           
+            <p>👉 Succulent Exhibition at the Botanical Garden</p>
+            <p>👉👉Despite the overcast weather, visitors continued to arrive at the Botanical Garden, drawn by our succulent exhibition. The display featured unique plants from the collections of ten of our members.
+                    As always, the exhibition provided a wonderful opportunity to exchange plants and share interesting specimens. Our exhibition volunteers were happy to tell visitors about the fascinating lives of these remarkable plants and share practical tips on growing and caring for succulents at home.
+                    A repotting workshop was also held, giving visitors useful advice on preparing the right soil mix, mastering watering techniques, and creating beautiful succulent arrangements.
+                    We are very delighted that several visitors expressed interest in joining our society! We look forward to welcoming our new friends at our meeting on 12 October.</p>                  
+             <br>  
+            <details class="content1">
+                <summary>🖼️ Fotogrāfijas no izstādes.  /<br> Photos from the exhibition </summary>
+                <div class="gallery">
+
+                    <img src="images/colection/sept-1.jpg" alt="sept-1-2">
+                    <img src="images/colection/sept-2.jpg" alt="sept-2-3">        
+                    <img src="images/colection/sept-3.jpg" alt="sept-3-4">
+                    <img src="images/colection/sept-4.jpg" alt="sept-4-5">
+                </div>
+            </details><br>
+
+        </div>
+
+        <div class="block" id="interesanti">
+            <h2>Tas ir interesanti / It is interesting</h2><br>
+
+            <p>
+                Interesants vēsturisks fakts par kaktusiem: <br>
+                <p>🌵 Senajā Meksikā kaktusi bija ļoti nozīmīgi augi. Tos izmantoja ne tikai pārtikā un medicīnā, bet arī vērtīgas sarkanās krāsvielas iegūšanai.
+                    Uz opuncijām — kaktusiem ar plakanām, lapām līdzīgām daļām — audzēja sīkus kukaiņus, košeniles. No tiem ieguva spilgti sarkanu krāsvielu, jo kukaiņu organismā atrodas viela, ko sauc par karmīnskābi.Lai iegūtu krāsvielu, košeniles savāca, izžāvēja un sasmalcināja pulverī. To sajauca ar ūdeni un karsēja. Ar dažādu piedevu palīdzību varēja iegūt dažādus toņus — no maigi rozā līdz dziļi purpursarkanam.
+                    Krāsvielu izmantoja audumu un dzijas krāsošanai. Košeniles audzēšana prasīja daudz darba, tāpēc iegūtā krāsviela bija ļoti vērtīga.
+                    Vēlāk, pēc spāņu ierašanās Amerikā, košenile tika eksportēta uz Eiropu, kur tā kļuva par nozīmīgu tirdzniecības preci. Interesanti, ka karmīnu izmanto arī mūsdienās.</p>               
+            </p>
+            <p>
+                An interesting historical fact about cacti:<br>
+                <p>🌵In ancient Mexico, cacti were very important plants. They were used not only as food and medicine, but also to produce a valuable red dye.
+                Tiny insects called cochineal were cultivated on prickly pear cacti, which have flat, leaf-like pads. A bright red dye was obtained from these insects because their bodies contain a substance called carminic acid.
+                To produce the dye, the cochineal insects were collected, dried and ground into a powder. The powder was mixed with water and heated. By adding different substances, various shades could be created, from delicate pink to deep purple-red.
+                The dye was used to colour fabrics and yarn. Raising cochineal required a great deal of work, which made the resulting dye highly valuable.
+                Later, after the arrival of the Spanish in the Americas, cochineal was exported to Europe, where it became an important trade commodity. Interestingly, carmine is still used today.</p>
+                </div>
+            </details>
+        </div>
+ <div class="block block-full" id="notikumi" style="text-align: center;">
+
+    <h2>Notikumi / Events</h2>
+
+    <p>👉 ELK, the European Countries Conference for cactus and succulent enthusiasts.</p>
+    <p style="color: black;">
+    No 11. līdz 13. septembrimб 2026 g. Beļģijā notika ikgadējais starptautiskais pasākums ELK (European Countries Conference), kas pulcē kaktusu un sukulentu mīļotājus un kolekcionārus no dažādām Eiropas valstīm.
+    Mūsu biedrības pārstāvis ELK apmeklēja privātā vizītē Beļģijā. Tā bija lieliska iespēja iepazīt kolekcijas, apmainīties ar pieredzi un satikt domubiedrus.<br>
+    From 11 to 13 September, 2026 the annual international ELK (European Countries Conference) took place in Belgium, bringing together cactus and succulent enthusiasts and collectors from across Europe.
+    A representative of our society attended ELK during a private visit to Belgium. It was a great opportunity to discover collections, exchange experience and meet fellow enthusiasts.    
+    </p>
+
+    <a href="https://www.elkcactus.eu" target="_blank" 
+       style="display: block; margin-top: 40px; color: red;">
+        https://www.elkcactus.eu
+    </a>       
+
+</div>
+    <div class="footer"><b>Saglabāsim dabu! Let's preserve nature!</b></div>
+
+    <!-- Простая структурированная разметка для события -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Kaktusu biedrības tikšanās: Kaktusu sēšana",
+      "description": "Nākamā biedrības sēde un lekcija par kaktusu sēšanu",
+      "startDate": "2024-12-12T18:00",
+      "endDate": "2024-12-12T20:00",
+      "location": {
+        "@type": "Place",
+        "name": "Latvijas Nacionālais Dabas muzejs",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Krišjāņa Barona iela 4",
+          "addressLocality": "Rīga",
+          "postalCode": "LV-1050",
+          "addressCountry": "LV"
+        }
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Mārīte Skulte"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Latvijas Kaktusu un citu sukulentu biedrība",
+        "url": "https://kaktuss.space"
+      }
+    }
+    </script>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <span id="lightbox-close" title="Aizvērt / Close">&#x2715;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        /* ── Themes ─────────────────────────────────────── */
+        (function () {
+            const saved = localStorage.getItem('kaktuss-theme') || '';
+            applyTheme(saved);
+
+            document.querySelectorAll('.theme-dot').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    applyTheme(btn.dataset.theme);
+                    localStorage.setItem('kaktuss-theme', btn.dataset.theme);
+                });
+            });
+
+            function applyTheme(theme) {
+                document.documentElement.className = theme ? 'theme-' + theme : '';
+                document.querySelectorAll('.theme-dot').forEach(b => {
+                    b.classList.toggle('active', b.dataset.theme === theme);
+                });
+            }
+        })();
+    
+        /* ── Slideshow ─────────────────────────────────── */
+        const ssImages = [
+            {src: 'images/colection_internet/wiki_1.jpg',  alt: 'Echinopsis oxygona'},
+            {src: 'images/colection_internet/wiki_2.jpg',  alt: 'Euphorbia caput-medusae'},
+            {src: 'images/colection_internet/wiki_3.jpg',  alt: 'Mammillaria longimamma'},
+            {src: 'images/colection_internet/wiki_4.jpg',  alt: 'Kaktusi muzejā'},
+            {src: 'images/colection_internet/wiki_5.jpg',  alt: 'Kaktuss dārzā'},
+            {src: 'images/colection_internet/wiki_6.jpg',  alt: 'Kaktuss'},
+            {src: 'images/colection_internet/wiki_7.jpg',  alt: 'Kaktuss'},
+            {src: 'images/colection_internet/wiki_8.jpg',  alt: 'Opuntia phaeacantha zieds'},
+            {src: 'images/colection_internet/wiki_11.jpg', alt: 'Aloinopsis malherbei'},
+            {src: 'images/colection_internet/wiki_12.jpg', alt: 'Sukulents'},
+            {src: 'images/colection_internet/wiki_13.jpg', alt: 'Sukulents'},
+            {src: 'images/colection_internet/wiki_14.jpg', alt: 'Sukulents makro'},
+            {src: 'images/colection_internet/wiki_15.jpg', alt: 'Sukulents'},
+            {src: 'images/colection_internet/wiki_16.jpg', alt: 'Sukulents terārijs'},
+            {src: 'images/colection_internet/wiki_17.jpg', alt: 'Sukulents dārzā'},
+            {src: 'images/colection_internet/wiki_18.jpg', alt: 'Sukulenti'},
+            {src: 'images/colection_internet/wiki_19.jpg', alt: 'Sukulenti'},
+            {src: 'images/colection_internet/wiki_20.jpg', alt: 'Sukulents makro'},
+        ];
+
+        let ssCurrent = 0;
+        let ssPlaying = false;
+        let ssTimer = null;
+        const ssImg = document.getElementById('ss-img');
+        const ssCur = document.getElementById('ss-cur');
+        const ssTotal = document.getElementById('ss-total');
+        const ssThumbsEl = document.getElementById('ss-thumbs');
+        const ssPlayBtn = document.getElementById('ss-play');
+
+        ssTotal.textContent = ssImages.length;
+
+        // Build thumbnails
+        ssImages.forEach((item, i) => {
+            const t = document.createElement('img');
+            t.src = item.src;
+            t.alt = item.alt;
+            t.className = i === 0 ? 'ss-active' : '';
+            t.addEventListener('click', () => ssGo(i));
+            ssThumbsEl.appendChild(t);
+        });
+
+        function ssGo(n) {
+            ssCurrent = (n + ssImages.length) % ssImages.length;
+            ssImg.src = ssImages[ssCurrent].src;
+            ssImg.alt = ssImages[ssCurrent].alt;
+            ssCur.textContent = ssCurrent + 1;
+            ssThumbsEl.querySelectorAll('img').forEach((t, i) => {
+                t.classList.toggle('ss-active', i === ssCurrent);
+            });
+            // Scroll active thumb into view
+            const activeThumb = ssThumbsEl.querySelectorAll('img')[ssCurrent];
+            if (activeThumb) activeThumb.scrollIntoView({block: 'nearest', inline: 'nearest'});
+        }
+
+        document.getElementById('ss-prev').addEventListener('click', () => ssGo(ssCurrent - 1));
+        document.getElementById('ss-next').addEventListener('click', () => ssGo(ssCurrent + 1));
+
+        ssPlayBtn.addEventListener('click', () => {
+            ssPlaying = !ssPlaying;
+            ssPlayBtn.innerHTML = ssPlaying
+                ? '&#9646;&#9646; Apturēt / Pause'
+                : '&#9654; Atskaņot / Play';
+            if (ssPlaying) {
+                ssTimer = setInterval(() => ssGo(ssCurrent + 1), 3500);
+            } else {
+                clearInterval(ssTimer);
+            }
+        });
+
+        // Keyboard navigation for slideshow
+        document.addEventListener('keydown', e => {
+            if (document.getElementById('lightbox').classList.contains('open')) return;
+            if (e.key === 'ArrowLeft')  ssGo(ssCurrent - 1);
+            if (e.key === 'ArrowRight') ssGo(ssCurrent + 1);
+        });
+
+        /* ── Lightbox ───────────────────────────────────── */
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const lbClose = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('img').forEach(img => {
+            if (img.closest('.ss-thumbs') || img.id === 'lightbox-img') return;
+            img.addEventListener('click', () => {
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lightbox.classList.add('open');
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            lbImg.src = '';
+        }
+
+        lightbox.addEventListener('click', e => {
+            if (e.target !== lbImg) closeLightbox();
+        });
+        lbClose.addEventListener('click', closeLightbox);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+
+</html>
